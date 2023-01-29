@@ -16,7 +16,7 @@ public class AreaCalculatorTests : BaseTests
         };
 
         var totalArea = CalculatorOfArea.GetTotalArea(figures);
-        
+
         Assert.That(totalArea, Is.EqualTo(38.1714478823081379).Within(1E-5));
     }
 
@@ -26,7 +26,7 @@ public class AreaCalculatorTests : BaseTests
         var figures = new List<Figure>();
 
         var totalArea = CalculatorOfArea.GetTotalArea(figures);
-        
+
         Assert.That(totalArea, Is.EqualTo(0d).Within(DefaultEpsilon));
     }
 }

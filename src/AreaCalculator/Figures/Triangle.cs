@@ -29,25 +29,13 @@ namespace AreaCalculator.Figures
         /// будет выброшено, если треугольник с данными сторонам не существует.
         public Triangle(double a, double b, double c)
         {
-            if (a < 0d)
-            {
-                throw ThrowHelper.SideValueIsNegative(nameof(a));
-            }
+            if (a < 0d) throw ThrowHelper.SideValueIsNegative(nameof(a));
 
-            if (b < 0d)
-            {
-                throw ThrowHelper.SideValueIsNegative(nameof(b));
-            }
+            if (b < 0d) throw ThrowHelper.SideValueIsNegative(nameof(b));
 
-            if (c < 0d)
-            {
-                throw ThrowHelper.SideValueIsNegative(nameof(c));
-            }
+            if (c < 0d) throw ThrowHelper.SideValueIsNegative(nameof(c));
 
-            if (a + b < c || b + c < a || c + a < b)
-            {
-                throw ThrowHelper.TriangleDoesNotExist();
-            }
+            if (a + b < c || b + c < a || c + a < b) throw ThrowHelper.TriangleDoesNotExist();
 
             this.a = a;
             this.b = b;
@@ -61,7 +49,7 @@ namespace AreaCalculator.Figures
 
         public override double GetArea()
         {
-            double halfOfPerimeter = (a + b + c) / 2d;
+            var halfOfPerimeter = (a + b + c) / 2d;
 
             return Math.Sqrt(halfOfPerimeter * (halfOfPerimeter - a) * (halfOfPerimeter - b) * (halfOfPerimeter - c));
         }
@@ -69,10 +57,15 @@ namespace AreaCalculator.Figures
         private static class ThrowHelper
         {
             // В идеале можно и свой эксепшн реализовать.
-            public static ArgumentException SideValueIsNegative(string sideName) =>
-                new ArgumentException("Значение стороны меньше нуля.", sideName);
+            public static ArgumentException SideValueIsNegative(string sideName)
+            {
+                return new ArgumentException("Значение стороны меньше нуля.", sideName);
+            }
 
-            public static TriangleNotExistsException TriangleDoesNotExist() => new TriangleNotExistsException();
+            public static TriangleNotExistsException TriangleDoesNotExist()
+            {
+                return new TriangleNotExistsException();
+            }
         }
 
         public override string GetDetailedInfo()

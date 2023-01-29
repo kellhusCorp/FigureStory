@@ -4,11 +4,11 @@ using AreaCalculator.Figures;
 using Sample.Figures;
 
 
-static class Program
+internal static class Program
 {
-    static void Main()
+    private static void Main()
     {
-        Rectangle rectangle = new Rectangle(3, 4);
+        var rectangle = new Rectangle(3, 4);
 
         var figures = GetDefaultFigures();
 

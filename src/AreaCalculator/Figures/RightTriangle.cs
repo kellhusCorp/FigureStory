@@ -3,14 +3,14 @@ using System;
 namespace AreaCalculator.Figures
 {
     // А надо ли было выделять?
-    
+
     /// <summary>
     /// Прямоугольный треугольник.
     /// </summary>
     public class RightTriangle : Triangle
     {
         public override string Name => "Прямоугольный треугольник";
-        
+
         /// <summary>
         /// Инстанцирует прямоугольный треугольник.
         /// </summary>

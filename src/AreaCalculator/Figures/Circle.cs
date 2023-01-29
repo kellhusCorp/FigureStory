@@ -21,14 +21,14 @@ namespace AreaCalculator.Figures
         public Circle(double radius)
         {
             // Опустил проверку на нуль. Вырожденный случай.
-            if (radius < 0)
-            {
-                throw new ArgumentException("Радиус должен быть положительным числом", nameof(radius));
-            }
+            if (radius < 0) throw new ArgumentException("Радиус должен быть положительным числом", nameof(radius));
             this.radius = radius;
         }
 
-        public override double GetArea() => Math.PI * radius * radius;
+        public override double GetArea()
+        {
+            return Math.PI * radius * radius;
+        }
 
         public override string GetDetailedInfo()
         {

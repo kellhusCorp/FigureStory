@@ -24,7 +24,7 @@ public class CircleTests : BaseTests
         Figure figure = new Circle(radius);
 
         var area = figure.GetArea();
-        
+
         Assert.That(area, Is.EqualTo(expectedValue).Within(DefaultEpsilon));
     }
 }

@@ -6,7 +6,7 @@ using AreaCalculator.Abstractions;
 namespace AreaCalculator
 {
     // Не любитель статики, но, пусть будет так.
-    
+
     /// <summary>
     /// Помощник для расчета площадей фигур.
     /// </summary>
@@ -19,11 +19,8 @@ namespace AreaCalculator
         /// <returns></returns>
         public static double GetArea(Figure figure)
         {
-            if (figure == null)
-            {
-                throw new ArgumentNullException(nameof(figure));
-            }
-            
+            if (figure == null) throw new ArgumentNullException(nameof(figure));
+
             return figure.GetArea();
         }
 

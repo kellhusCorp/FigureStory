@@ -8,7 +8,7 @@ namespace AreaCalculator.Figures
     public class IsoscelesTriangle : Triangle
     {
         public override string Name => "Равнобедренный треугольник";
-        
+
         /// <summary>
         /// Инстанцирует равнобедренный треугольник.
         /// </summary>
