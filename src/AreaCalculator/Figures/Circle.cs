@@ -8,6 +8,8 @@ namespace AreaCalculator.Figures
     /// </summary>
     public class Circle : Figure
     {
+        public override string Name { get; } = "Круг";
+
         private readonly double radius;
 
         /// <summary>
@@ -27,5 +29,11 @@ namespace AreaCalculator.Figures
         }
 
         public override double GetArea() => Math.PI * radius * radius;
+
+        public override string GetDetailedInfo()
+        {
+            return base.GetDetailedInfo() +
+                   $"Радиус: {radius}";
+        }
     }
 }

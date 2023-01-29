@@ -7,6 +7,8 @@ namespace AreaCalculator.Figures
     /// </summary>
     public class EquilateralTriangle : Triangle
     {
+        public override string Name => "Равносторонний треугольник";
+
         /// <summary>
         /// Инстанцирует равносторонний треугольник.
         /// </summary>

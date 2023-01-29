@@ -1,13 +1,16 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using AreaCalculator.Abstractions;
 
 namespace AreaCalculator
 {
+    // Не любитель статики, но, пусть будет так.
+    
     /// <summary>
     /// Помощник для расчета площадей фигур.
     /// </summary>
-    public static class AreaCalculator
+    public static class CalculatorOfArea
     {
         /// <summary>
         /// Возвращает площадь фигуры.
@@ -16,6 +19,11 @@ namespace AreaCalculator
         /// <returns></returns>
         public static double GetArea(Figure figure)
         {
+            if (figure == null)
+            {
+                throw new ArgumentNullException(nameof(figure));
+            }
+            
             return figure.GetArea();
         }
 

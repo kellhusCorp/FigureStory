@@ -9,6 +9,8 @@ namespace AreaCalculator.Figures
     /// </summary>
     public class RightTriangle : Triangle
     {
+        public override string Name => "Прямоугольный треугольник";
+        
         /// <summary>
         /// Инстанцирует прямоугольный треугольник.
         /// </summary>

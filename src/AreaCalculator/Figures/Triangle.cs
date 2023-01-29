@@ -10,6 +10,8 @@ namespace AreaCalculator.Figures
     /// </summary>
     public class Triangle : Figure
     {
+        public override string Name => "Треугольник";
+
         protected readonly double a;
         protected readonly double b;
         protected readonly double c;
@@ -71,6 +73,17 @@ namespace AreaCalculator.Figures
                 new ArgumentException("Значение стороны меньше нуля.", sideName);
 
             public static TriangleNotExistsException TriangleDoesNotExist() => new TriangleNotExistsException();
+        }
+
+        public override string GetDetailedInfo()
+        {
+            return base.GetDetailedInfo() +
+                   string.Join(Environment.NewLine, GetSideInfo(nameof(a), a), GetSideInfo(nameof(b), b), GetSideInfo(nameof(c), c));
+        }
+
+        private static string GetSideInfo(string sideName, double value)
+        {
+            return $"Сторона {sideName} = {value}";
         }
     }
 }
