@@ -18,6 +18,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sql queries", "Sql queries", "{D533BE37-9E8D-4F7F-A6D3-AA10E354A3B1}"
+	ProjectSection(SolutionItems) = preProject
+		sql_queries\CreateCategoriesTable.sql = sql_queries\CreateCategoriesTable.sql
+		sql_queries\CreateProductsCategoriesTable.sql = sql_queries\CreateProductsCategoriesTable.sql
+		sql_queries\CreateProductsTable.sql = sql_queries\CreateProductsTable.sql
+		sql_queries\SelectPairsProductCategory.sql = sql_queries\SelectPairsProductCategory.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
