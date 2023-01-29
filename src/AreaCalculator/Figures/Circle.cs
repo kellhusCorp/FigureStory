@@ -11,7 +11,7 @@ namespace AreaCalculator.Figures
         private readonly double radius;
 
         /// <summary>
-        /// Конструктор по-умолч.
+        /// Инстанцирует круг.
         /// </summary>
         /// <param name="radius">Радиус круга.</param>
         /// <exception cref="ArgumentException">

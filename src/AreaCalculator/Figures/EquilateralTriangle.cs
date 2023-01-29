@@ -8,7 +8,7 @@ namespace AreaCalculator.Figures
     public class EquilateralTriangle : Triangle
     {
         /// <summary>
-        /// Конструктор по-умолч.
+        /// Инстанцирует равносторонний треугольник.
         /// </summary>
         /// <param name="side">Сторона А.</param>
         public EquilateralTriangle(double side) : base(side, side, side)

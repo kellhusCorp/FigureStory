@@ -8,7 +8,7 @@ namespace AreaCalculator.Figures
     public class IsoscelesTriangle : Triangle
     {
         /// <summary>
-        /// Конструктор по-умолч.
+        /// Инстанцирует равнобедренный треугольник.
         /// </summary>
         /// <param name="side">Сторона А.</param>
         /// <param name="base">Основание треугольника.</param>

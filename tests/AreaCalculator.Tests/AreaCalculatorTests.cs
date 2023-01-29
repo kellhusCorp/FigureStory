@@ -19,4 +19,14 @@ public class AreaCalculatorTests : BaseTests
         
         Assert.That(totalArea, Is.EqualTo(38.1714478823081379).Within(1E-5));
     }
+
+    [Test]
+    public void Test_AreaCalculator_GetTotalArea_Returns_0_When_Figure_Collection_Is_Empty()
+    {
+        var figures = new List<Figure>();
+
+        var totalArea = AreaCalculator.GetTotalArea(figures);
+        
+        Assert.That(totalArea, Is.EqualTo(0d).Within(DefaultEpsilon));
+    }
 }

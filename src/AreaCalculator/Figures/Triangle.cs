@@ -15,7 +15,7 @@ namespace AreaCalculator.Figures
         protected readonly double c;
 
         /// <summary>
-        /// Конструктор по-умолч.
+        /// Инстанцирует треугольник.
         /// </summary>
         /// <param name="a">Сторона А.</param>
         /// <param name="b">Сторона B.</param>
